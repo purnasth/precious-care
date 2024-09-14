@@ -11,7 +11,8 @@ export default {
         secondary: "#C0C0C0", 
       },
       fontFamily: {
-        sans: ["Poppins", "sans-serif"], 
+        body: ["Titillium Web", "sans-serif"], 
+        luxury: ['Glamora', 'sans-serif'],
       },
     },
   },
