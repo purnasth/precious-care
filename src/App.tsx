@@ -9,7 +9,7 @@ const App: React.FC = () => {
       <Navbar />
       <section>
         <img
-          src="https://images.pexels.com/photos/265906/pexels-photo-265906.jpeg?cs=srgb&dl=pexels-pixabay-265906.jpg&fm=jpg"
+          src="https://images.wondershare.com/virtulook/articles/jewelry-photography-at-home-1.jpg"
           alt=""
           className="w-full h-screen object-cover"
         />
