@@ -7,6 +7,7 @@ export default {
         primary: "#D4AF37",
         secondary: "#C0C0C0",
         dark: "#000111",
+        light: "#F8F8FF",
       },
       fontFamily: {
         body: ["Titillium Web", "sans-serif"],
@@ -23,7 +24,7 @@ export default {
     },
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
       screens: {
         sm: "100%",
         md: "100%",
