@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { TbMenu2 } from "react-icons/tb";
-import { MdClose } from "react-icons/md";
-import { MdCall } from "react-icons/md";
+import { TbMenu2, TbMailFilled } from "react-icons/tb";
+import { MdClose, MdCall, MdFacebook, MdLocationPin } from "react-icons/md";
+import { IoLogoWhatsapp } from "react-icons/io";
 import logo from "../../assets/logo.png";
 
 const SideNav: React.FC = () => {
@@ -53,7 +53,7 @@ const SideNav: React.FC = () => {
               <li>
                 <a
                   href="#"
-                  className="text-sm inline-flex items-center justify-end gap-2 tracking-widest uppercase"
+                  className="text-base inline-flex items-center justify-end gap-1 tracking-wide uppercase"
                 >
                   <MdCall className="text-xl" /> +977-9851339832
                 </a>
@@ -118,7 +118,7 @@ const SideNav: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="col-span-3 space-y-16">
+              <div className="col-span-3 space-y-10">
                 <div>
                   <span className="uppercase text-dark/80">Our Products</span>
                   <div className="mt-4 grid grid-cols-4 gap-5">
@@ -126,7 +126,7 @@ const SideNav: React.FC = () => {
                       <img
                         src="https://kalpamart.com/media/products/Sterling-Silver-Infinity-CZ-Diamond-Ring-MR051R-600x600.jpg"
                         alt="Silver Ring"
-                        className="w-full h-64 object-contain bg-white shadow-md"
+                        className="w-full h-64 object-contain bg-white shadow-md group-hover:shadow-lg transition-all duration-300"
                       />
                       <h4 className="text-lg font-medium text-dark/80 flex items-center gap-2">
                         <span className="h-[1px] w-12 group-hover:w-4 bg-dark/80 transition-all duration-300"></span>
@@ -137,7 +137,7 @@ const SideNav: React.FC = () => {
                       <img
                         src="https://kalpamart.com/media/products/Sterling-Silver-Infinity-CZ-Diamond-Ring-MR051R-600x600.jpg"
                         alt="Silver Ring"
-                        className="w-full h-64 object-contain bg-white shadow-md"
+                        className="w-full h-64 object-contain bg-white shadow-md group-hover:shadow-lg transition-all duration-300"
                       />
                       <h4 className="text-lg font-medium text-dark/80 flex items-center gap-2">
                         <span className="h-[1px] w-12 group-hover:w-4 bg-dark/80 transition-all duration-300"></span>
@@ -148,7 +148,7 @@ const SideNav: React.FC = () => {
                       <img
                         src="https://kalpamart.com/media/products/Sterling-Silver-Infinity-CZ-Diamond-Ring-MR051R-600x600.jpg"
                         alt="Silver Ring"
-                        className="w-full h-64 object-contain bg-white shadow-md"
+                        className="w-full h-64 object-contain bg-white shadow-md group-hover:shadow-lg transition-all duration-300"
                       />
                       <h4 className="text-lg font-medium text-dark/80 flex items-center gap-2">
                         <span className="h-[1px] w-12 group-hover:w-4 bg-dark/80 transition-all duration-300"></span>
@@ -159,7 +159,7 @@ const SideNav: React.FC = () => {
                       <img
                         src="https://kalpamart.com/media/products/Sterling-Silver-Infinity-CZ-Diamond-Ring-MR051R-600x600.jpg"
                         alt="Silver Ring"
-                        className="w-full h-64 object-contain bg-white shadow-md"
+                        className="w-full h-64 object-contain bg-white shadow-md group-hover:shadow-lg transition-all duration-300"
                       />
                       <h4 className="text-lg font-medium text-dark/80 flex items-center gap-2">
                         <span className="h-[1px] w-12 group-hover:w-4 bg-dark/80 transition-all duration-300"></span>
@@ -170,18 +170,64 @@ const SideNav: React.FC = () => {
                 </div>
 
                 <div>
-                  <p className="max-w-3xl">
+                  <p className="max-w-3xl text-dark">
                     Jewellery Store in Jyatha Thamel since 2016. Remember for
                     all kinds of silver and metal jewellery, semi precious
                     stones at reasonable price and quality. Get what u think it
                     is. We give full information on what u are buying.
                   </p>
+                  <ul className="flex items-center gap-4 mt-5">
+                    <li className="group">
+                      <a
+                        href="#"
+                        className="text-sm font-semibold text-dark/70 drop-shadow flex items-center gap-1"
+                      >
+                        <MdFacebook className="text-xl" />
+                        <label className="text-dark/60 hover:text-dark hover:underline hidden group-hover:block transition-all duration-300">
+                          Precious Care Collection
+                        </label>
+                      </a>
+                    </li>
+                    <li className="group">
+                      <a
+                        href="#"
+                        className="text-sm font-semibold text-dark/70 drop-shadow flex items-center gap-1"
+                      >
+                        <IoLogoWhatsapp className="text-xl" />
+                        <label className="text-dark/60 hover:text-dark hover:underline hidden group-hover:block transition-all duration-300">
+                          +977-9851339832
+                        </label>
+                      </a>
+                    </li>
+                    <li className="group">
+                      <a
+                        href="#"
+                        className="text-sm font-semibold text-dark/70 drop-shadow flex items-center gap-1"
+                      >
+                        <TbMailFilled className="text-xl" />
+                        <label className="text-dark/60 hover:text-dark hover:underline hidden group-hover:block transition-all duration-300">
+                          preciouscarecollection@gmail.com
+                        </label>
+                      </a>
+                    </li>
+                    <li className="group">
+                      <a
+                        href="#"
+                        className="text-sm font-semibold text-dark/70 drop-shadow flex items-center gap-1"
+                      >
+                        <MdLocationPin className="text-xl" />
+                        <label className="text-dark/60 hover:text-dark hover:underline hidden group-hover:block transition-all duration-300">
+                          Jyatha Thamel, Kathmandu, Nepal
+                        </label>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
           <div className="flex items-center justify-between relative w-full">
-            <p>&copy; 2024 Precious Care Collection. All Rights Reserved.</p>
+            <p>&copy; 2024 Precious Care. All Rights Reserved.</p>
             <p className="flex item-center group">
               Developed by
               <a
