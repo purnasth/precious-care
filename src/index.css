@@ -12,7 +12,7 @@
 @layer components {
   h1,
   h2,
-  h3{
+  h3 {
     @apply font-luxury font-extralight;
   }
 
@@ -25,5 +25,10 @@
   span,
   li {
     @apply font-body;
+  }
+
+  .filter-black {
+    filter: brightness(0) saturate(100%) invert(3%) sepia(17%) saturate(7030%)
+      hue-rotate(273deg) brightness(105%) contrast(105%);
   }
 }

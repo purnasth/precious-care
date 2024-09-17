@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { TbMenu2 } from "react-icons/tb";
+import { MdClose } from "react-icons/md";
+import { MdCall } from "react-icons/md";
+import logo from "../../assets/logo.png";
 
 const SideNav: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,35 +31,170 @@ const SideNav: React.FC = () => {
       )}
 
       <div
-        className={`fixed top-0 left-0 w-64 h-full bg-gray-800 text-white transition-transform transform ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-0 left-0 w-full h-screen text-dark transition-all duration-500 ${
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         } z-50`}
       >
-        <div className="p-4">
-          <button
-            onClick={closeNav}
-            className="text-white text-2xl absolute top-4 right-4"
-          >
-            &times;
-          </button>
-          <h2 className="text-lg font-semibold">Side Navigation</h2>
-          <ul className="mt-4">
-            <li>
-              <a href="#section1" className="block py-2 px-4 hover:bg-gray-700">
-                Section 1
+        <div
+          className="absolute inset-0 size-full bg-cover -z-10"
+          style={{
+            backgroundImage:
+              'url("https://media.istockphoto.com/id/1704870086/vector/abstract-gray-and-white-color-gradient-background-vector-illustration.jpg?s=612x612&w=0&k=20&c=U_tzoW8Rktdydkc8Ng-O-1kPI-r7BcJun-o2O3n2nvM=")',
+          }}
+        ></div>
+        <div className="px-12 pt-2 pb-14 flex items-center justify-between flex-col gap-16 size-full">
+          <div className="flex items-center justify-between relative w-full">
+            <ul className="w-1/3 flex items-center gap-3">
+              {/* <li>
+                <a href="#" className="text-xl"><MdFacebook /></a>
+              </li> */}
+              <li>
+                <a
+                  href="#"
+                  className="text-sm inline-flex items-center justify-end gap-2 tracking-widest uppercase"
+                >
+                  <MdCall className="text-xl" /> +977-9851339832
+                </a>
+              </li>
+            </ul>
+            <a href="/" className="flex-grow flex justify-center">
+              <img
+                src={logo}
+                alt="Logo"
+                className={`filter-black h-24 object-contain transition-all duration-500`}
+              />
+            </a>
+            <button
+              onClick={closeNav}
+              className="w-1/3 text-xs inline-flex items-center justify-end gap-1 tracking-widest uppercase"
+            >
+              Close
+              <MdClose className="text-3xl" />
+            </button>
+          </div>
+          <div className="w-full">
+            <div className="relative grid grid-cols-4">
+              <div className="col-span-1">
+                {/* <span className="uppercase text-dark/40 mb-8">Menu</span> */}
+                <ul className="links flex items-start justify-start gap-2 md:gap-24 flex-col">
+                  <li className="w-full">
+                    <a
+                      href="#"
+                      className="navlink w-full pb-2 inline-block font-luxury text-4xl text-dark tracking-widest uppercase"
+                      aria-label="Silver Rings"
+                    >
+                      Rings
+                    </a>
+                  </li>
+                  <li className="w-full">
+                    <a
+                      href="#"
+                      className="navlink w-full pb-2 inline-block font-luxury text-4xl text-dark tracking-widest uppercase"
+                      aria-label="Jewelry"
+                    >
+                      Jewelry
+                    </a>
+                  </li>
+                  <li className="w-full">
+                    <a
+                      href="#"
+                      className="navlink w-full pb-2 inline-block font-luxury text-4xl text-dark tracking-widest uppercase"
+                      aria-label="Stones"
+                    >
+                      Stones
+                    </a>
+                  </li>
+                  <li className="w-full">
+                    <a
+                      href="aboutPage.html"
+                      className="navlink w-full pb-2 inline-block font-luxury text-4xl text-dark tracking-widest uppercase"
+                      aria-label="Gallery"
+                    >
+                      Gallery
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="col-span-3 space-y-16">
+                <div>
+                  <span className="uppercase text-dark/80">Our Products</span>
+                  <div className="mt-4 grid grid-cols-4 gap-5">
+                    <div className="group space-y-2">
+                      <img
+                        src="https://kalpamart.com/media/products/Sterling-Silver-Infinity-CZ-Diamond-Ring-MR051R-600x600.jpg"
+                        alt="Silver Ring"
+                        className="w-full h-64 object-contain bg-white shadow-md"
+                      />
+                      <h4 className="text-lg font-medium text-dark/80 flex items-center gap-2">
+                        <span className="h-[1px] w-12 group-hover:w-4 bg-dark/80 transition-all duration-300"></span>
+                        Silver Ring
+                      </h4>
+                    </div>
+                    <div className="group space-y-2">
+                      <img
+                        src="https://kalpamart.com/media/products/Sterling-Silver-Infinity-CZ-Diamond-Ring-MR051R-600x600.jpg"
+                        alt="Silver Ring"
+                        className="w-full h-64 object-contain bg-white shadow-md"
+                      />
+                      <h4 className="text-lg font-medium text-dark/80 flex items-center gap-2">
+                        <span className="h-[1px] w-12 group-hover:w-4 bg-dark/80 transition-all duration-300"></span>
+                        Silver Ring
+                      </h4>
+                    </div>
+                    <div className="group space-y-2">
+                      <img
+                        src="https://kalpamart.com/media/products/Sterling-Silver-Infinity-CZ-Diamond-Ring-MR051R-600x600.jpg"
+                        alt="Silver Ring"
+                        className="w-full h-64 object-contain bg-white shadow-md"
+                      />
+                      <h4 className="text-lg font-medium text-dark/80 flex items-center gap-2">
+                        <span className="h-[1px] w-12 group-hover:w-4 bg-dark/80 transition-all duration-300"></span>
+                        Silver Ring
+                      </h4>
+                    </div>
+                    <div className="group space-y-2">
+                      <img
+                        src="https://kalpamart.com/media/products/Sterling-Silver-Infinity-CZ-Diamond-Ring-MR051R-600x600.jpg"
+                        alt="Silver Ring"
+                        className="w-full h-64 object-contain bg-white shadow-md"
+                      />
+                      <h4 className="text-lg font-medium text-dark/80 flex items-center gap-2">
+                        <span className="h-[1px] w-12 group-hover:w-4 bg-dark/80 transition-all duration-300"></span>
+                        Silver Ring
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <p className="max-w-3xl">
+                    Jewellery Store in Jyatha Thamel since 2016. Remember for
+                    all kinds of silver and metal jewellery, semi precious
+                    stones at reasonable price and quality. Get what u think it
+                    is. We give full information on what u are buying.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center justify-between relative w-full">
+            <p>&copy; 2024 Precious Care Collection. All Rights Reserved.</p>
+            <p className="flex item-center group">
+              Developed by
+              <a
+                className="ml-1 font-semibold flex items-center gap-1"
+                rel="noreferrer"
+                href="https://www.purnashrestha.com.np/"
+                target="_blank"
+              >
+                <span className="h-[1px] w-1 group-hover:w-6 bg-dark/80 transition-all duration-300"></span>
+                Purna Shrestha
               </a>
-            </li>
-            <li>
-              <a href="#section2" className="block py-2 px-4 hover:bg-gray-700">
-                Section 2
-              </a>
-            </li>
-            <li>
-              <a href="#section3" className="block py-2 px-4 hover:bg-gray-700">
-                Section 3
-              </a>
-            </li>
-          </ul>
+            </p>
+          </div>
         </div>
       </div>
     </>
